@@ -37,7 +37,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         // Handle respons dari server (misalnya, tampilkan pesan sukses)
         console.log('Pendaftaran berhasil:', data);
         // Redirect ke halaman login setelah pendaftaran berhasil
-        window.location.href = 'index.html'; // Ganti dengan nama file halaman login yang sesuai
+        window.location.href = 'login.html'; // Ganti dengan nama file halaman login yang sesuai
     })
     .catch(error => {
         // Handle kesalahan (misalnya, tampilkan pesan kesalahan)

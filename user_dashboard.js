@@ -1,6 +1,6 @@
 document.getElementById('logoutButton').addEventListener('click', function () {
     // Redirect ke halaman login saat tombol keluar diklik
-    window.location.href = 'index.html'; // Ganti dengan nama file halaman login yang sesuai
+    window.location.href = 'login.html'; // Ganti dengan nama file halaman login yang sesuai
 });
 document.addEventListener('DOMContentLoaded', function () {
     fetch('http://13.215.163.208:8080/userss')
