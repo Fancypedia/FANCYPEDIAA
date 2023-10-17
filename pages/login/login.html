@@ -32,17 +32,30 @@
 
     <!-------------------- ------ Right Box ---------------------------->
    
-       <div class="col-md-6 right-box">
+    <div class="col-md-6 right-box">
         <form id="loginForm">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-        </form>
-       </div> 
+        <div class="row align-items-center">
+              <div class="header-text mb-4">
+                   <h2>Hello,Again</h2>
+                   <p>We are happy to have you back.</p>
+              </div>
+              <div class="input-group mb-3">
+                  <input id="email" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+              </div>
+              <div class="input-group mb-1">
+                  <input id="password" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+              </div>
+              <div class="input-group mb-5 d-flex justify-content-between">
+              </div>
+              <div class="input-group mb-3">
+                  <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+              </div>
+              <div class="row">
+                  <small>Don't have account? <a href="#">Sign Up</a></small>
+              </div>
+        </div>
+    </form>
+     </div> 
 
       </div>
     </div>
