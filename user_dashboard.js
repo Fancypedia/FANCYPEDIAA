@@ -3,7 +3,7 @@ document.getElementById('logoutButton').addEventListener('click', function () {
     window.location.href = 'index.html'; // Ganti dengan nama file halaman login yang sesuai
 });
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();

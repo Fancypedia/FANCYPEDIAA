@@ -4,7 +4,7 @@ document.getElementById('logoutButton').addEventListener('click', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch data dari API
-    fetch('http://localhost:9000/userss')
+    fetch('http://13.215.163.208:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();

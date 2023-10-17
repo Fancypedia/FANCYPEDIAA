@@ -19,7 +19,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     };
 
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
-    fetch('http://localhost:9000/user/signup', {
+    fetch('http://13.215.163.208:8080/user/signup', {
         method: 'POST',
         body: JSON.stringify(userData),
         headers: {
