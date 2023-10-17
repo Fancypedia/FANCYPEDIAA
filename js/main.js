@@ -30,12 +30,12 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
         // Handle respons dari server di sini
         // Cek jenis pengguna (USER atau ADMIN) berdasarkan data yang diterima
         if (data.user_type === 'USER') {
-            // Pengguna adalah USER
-            window.location.href = 'user_dashboard.html'; 
+            // Pengguna adalah USER 
+            window.location.href = '/pages/user/user_dashboard.html'; 
             console.log('sebagai user' + data);
         } else if (data.user_type === 'ADMIN') {
             // Pengguna adalah ADMIN
-            window.location.href = 'admin_dashboard.html'; 
+            window.location.href = '/pages/admin/admin_dashboard.html'; 
             console.log('sebagai admin' + data);
             // Ganti dengan halaman ADMIN yang sesuai
         } else {
