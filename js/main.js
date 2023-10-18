@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     };
 
     // Kirim permintaan HTTP (login) dengan data pengguna
-    fetch('http://13.215.163.208:8080/user/login', {
+    fetch('http://54.179.160.206:8080/user/login', {
         method: 'POST',
         body: JSON.stringify(userData),
         headers: {
@@ -49,7 +49,7 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     });
 });
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://13.215.163.208:8080/userss')
+    fetch('http://54.179.160.206:8080/userss')
         .then(response => {
             if (response.ok) {
                 return response.json();
