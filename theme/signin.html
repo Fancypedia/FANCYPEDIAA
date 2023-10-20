@@ -54,9 +54,9 @@
 				</div>
 				<div class="column is-6-desktop is-8-tablet">
 					<div class="header-top-right has-text-right-tablet has-text-centered-mobile">
-						<a href="https://www.facebook.com/themefisher" target="_blank"><i class="icofont-facebook"></i></a>
-						<a href="https://twitter.com/themefisher" target="_blank"><i class="icofont-twitter"></i></a>
-						<a href="https://github.com/themefisher/" target="_blank"><i class="icofont-github"></i></a>
+						<a href="#" target="_blank"><i class="icofont-facebook"></i></a>
+						<a href="#" target="_blank"><i class="icofont-twitter"></i></a>
+						<a href="#" target="_blank"><i class="icofont-github"></i></a>
 						<a href="#" target="_blank"><i class="icofont-pinterest"></i></a>
 						<a href="#" target="_blank"><i class="icofont-linkedin"></i></a>
 						<a href="signin.html" class="top-btn">Sign In</a>
@@ -138,13 +138,13 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-4">
-					<form action="" class="box">
+					<form id="login-form" action="" class="box">
 						<div class="field">
 							<label class="label">
-								Email
+								Username
 							</label>
 							<div class="control has-icons-left">
-								<input type="email" class="input" placeholder="fancypedia@example.com">
+								<input id="username" type="text" class="input" placeholder="username" required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-envelope"></i>
 								</span>
@@ -153,17 +153,14 @@
 						<div class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
-								<input type="password" class="input" placeholder="fancypedia@example.com">
+								<input id="password" type="password" class="input" placeholder="password" required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-lock"></i>
 								</span>
 							</div>
 						</div>
+						<p id="message"></p>
 						<div class="field">
-							<label class="label">
-								<input type="checkbox" class="checkbox">
-								Remember me
-							</label>
 						</div>
 						<div class="field">
 							<button class="button" style="background: #F8A556;">Login</button>
@@ -195,9 +192,9 @@
 						<li><a href="#"><i class="icofont-email"></i>info@example.com</a></li>
 					</ul>
 					<ul class="list-inline footer-socials">
-						<li class="list-inline-item"><a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/themefisher"><i class="icofont-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.pinterest.com/themefisher/"><i class="icofont-linkedin"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="icofont-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="#">><i class="icofont-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="#">><i class="icofont-linkedin"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -291,6 +288,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script src="js/script.js"></script>
-
+    <script src="../js/signin.js"></script>
   </body>
   </html>
