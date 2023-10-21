@@ -8,11 +8,13 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     // Membuat objek yang berisi data pendaftaran pengguna
     const userData = {
         Username: username,
-        Password: password
+        Password: password,
+        Role: "user"
+
     };
 
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
-    fetch('https://asia-southeast2-testlogin-366704.cloudfunctions.net/post', {
+    fetch('https://asia-southeast2-testlogin-366704.cloudfunctions.net/postuser', {
         method: 'POST',
         body: JSON.stringify(userData),
         headers: {
