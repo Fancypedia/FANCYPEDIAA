@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                username: username,
-                password: password
+                Username: username,
+                Password: password
             })
         })
         .then(response => response.json())
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const welcomeMessage = data.message;
                 message.textContent = welcomeMessage;
                 message.style.color = "green";
-console.log(token);
+        console.log(token);
                 // Redirect to dashboard.html upon successful login
                 window.location.href = "../theme/admin-dashboard.html";
             } else {

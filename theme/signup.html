@@ -19,7 +19,7 @@
   <!-- theme meta -->
   <meta name="theme-name" content="wishfund-bulma" />
 
-  <title>WishFund- Nonprofit Charity Funderising Theme</title>
+  <title>Fancypedia</title>
 
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bulma/bulma.min.css">
@@ -138,38 +138,14 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-4">
-					<form action="" class="box">
-
-						<div class="field">
-							<label class="label">
-								First Name
-							</label>
-							<div class="control has-icons-left">
-								<input type="text" class="input" placeholder="firstname">
-								<span class="icon is-small is-left">
-									<i class="fa fa-user"></i>
-								</span>
-							</div>
-						</div>
-
-						<div class="field">
-							<label class="label">
-								Last Name
-							</label>
-							<div class="control has-icons-left">
-								<input type="text" class="input" placeholder="lastname">
-								<span class="icon is-small is-left">
-									<i class="fa fa-user"></i>
-								</span>
-							</div>
-						</div>
+					<form id="signupForm" action="" class="box">
 
 						<div class="field">
 							<label class="label">
 								Username
 							</label>
 							<div class="control has-icons-left">
-								<input type="text" class="input" placeholder="username">
+								<input id="username" type="text" class="input" placeholder="username">
 								<span class="icon is-small is-left">
 									<i class="fa fa-envelope"></i>
 								</span>
@@ -179,19 +155,9 @@
 						<div class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
-								<input type="password" class="input" placeholder="password">
+								<input id="password" type="password" class="input" placeholder="password">
 								<span class="icon is-small is-left">
 									<i class="fa fa-lock"></i>
-								</span>
-							</div>
-						</div>
-
-						<div class="field">
-							<label class="label">Phone Number</label>
-							<div class="control has-icons-left">
-								<input type="text" class="input" placeholder="+62 123 456">
-								<span class="icon is-small is-left">
-									<i class="fa fa-phone"></i>
 								</span>
 							</div>
 						</div>
@@ -324,6 +290,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script src="js/script.js"></script>
+    <script src="../js/signup.js"></script>
 
   </body>
   </html>
