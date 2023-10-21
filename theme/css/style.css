@@ -916,6 +916,7 @@ ul.list-styled {
 
 .confirmation-content i,
 .error-content i {
+  background-image: url(https://cdn.dribbble.com/users/1939393/screenshots/6392286/dribbble-404-error.gif);
   width: 120px;
   height: 120px;
   background: #f89d35;
