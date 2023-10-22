@@ -140,7 +140,7 @@
 				<div class="column is-4">
 					<form id="signupForm" action="" class="box">
 
-						<div class="field">
+						<div id="username" class="field">
 							<label class="label">
 								Username
 							</label>
@@ -152,7 +152,7 @@
 							</div>
 						</div>
 						
-						<div class="field">
+						<div id="password" class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
 								<input id="password" type="password" class="input" placeholder="password" required>
@@ -162,17 +162,21 @@
 							</div>
 						</div>
 
-						<div class="field">
+						<div id="btnSignup" class="field">
 							<button class="button" type="submit" style="background: #F8A556;">Signup</button>
 						</div>
 
-						<div class="row">
+						<div id="hrefSignin" class="row">
 							<small>Already have an account? <a href="signin.html" style="color: #F8A556;">Sign In</a></small>
 						</div>
 
 						<div id="notification" class="notification is-success is-hidden">
 							Pendaftaran berhasil! Anda dapat masuk sekarang.
 						  </div>
+
+						  <div id="btnLoginDisini" class="notification is-white is-hidden">
+							<button class="button" type="submit" style="background: #F8A556;">Ke Halaman Login</button>
+						</div>
 						  
 
 					</form>
