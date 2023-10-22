@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                Username: username,
-                Password: password
+                username: username,
+                password: password
             })
         })
         .then(response => response.json())
@@ -28,43 +28,44 @@ document.addEventListener("DOMContentLoaded", function() {
                 message.style.color = "green";
                 console.log(token);
                 
-                // Redirect to dashboard.html upon successful login
-                window.location.href = "../theme/admin-dashboard.html";
-            } else {
-                // If the first API call fails, make a second API call
-                fetch("https://asia-southeast2-testlogin-366704.cloudfunctions.net/function-2ss", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        Username: username,
-                        Password: password,
-                        Role: "user"
-                    })
-                })
+                // After successful login, fetch user data and filter it
+                fetch("https://asia-southeast2-testlogin-366704.cloudfunctions.net/getaaalll")
                 .then(response => response.json())
-                .then(data => {
-                    if (data.status === true) {
-                        const welcomeMessage = data.message;
-                        message.textContent = welcomeMessage;
-                        message.style.color = "green";
-                        // Handle the response from the second API call
-                        console.log(token);
-                        // Redirect or perform other actions as needed
-                        window.location.href = "../theme/user.html";
+                .then(userList => {
+                    const user = userList.find(user => user.username === username);
+                    if (user) {
+                        // User found, navigate to the dashboard
+                        window.location.href = "../theme/admin-dashboard.html";
                     } else {
-                        message.textContent = "Login failed. Please check your credentials.";
+                        // User not found
+                        message.textContent = "User not found in the database.";
                         message.style.color = "red";
                     }
                 })
                 .catch(error => {
-                    console.error("Error:", error);
+                    console.error("Error fetching user data:", error);
+                });
+            } else {
+                fetch("https://asia-southeast2-testlogin-366704.cloudfunctions.net/getaaalll")
+                .then(response => response.json())
+                .then(userList => {
+                    const user = userList.find(user => user.username === username);
+                    if (user) {
+                        // User found, navigate to the dashboard
+                        window.location.href = "../theme/user.html";
+                    } else {
+                        // User not found
+                        message.textContent = "User not found in the database.";
+                        message.style.color = "red";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching user data:", error);
                 });
             }
         })
         .catch(error => {
             console.error("Error:", error);
-        });
-    });
+        });
+    });
 });
