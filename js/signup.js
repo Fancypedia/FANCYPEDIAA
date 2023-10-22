@@ -31,11 +31,19 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     .then(data => {
         // Handle respons dari server (misalnya, tampilkan pesan sukses)
         console.log('Pendaftaran berhasil:', data);
+    
+        // Menampilkan notifikasi
+        const notification = document.getElementById('notification');
+        notification.classList.remove('is-hidden');
+    
         // Redirect ke halaman login setelah pendaftaran berhasil
         // window.location.href = '../theme/admin-dashboard.html'; // Ganti dengan nama file halaman login yang sesuai
     })
+    
     .catch(error => {
         // Handle kesalahan (misalnya, tampilkan pesan kesalahan)
         console.error('Pendaftaran error:', error);
     });
 });
+
+
