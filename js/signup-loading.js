@@ -1,14 +1,6 @@
 document.getElementById('signupForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Menyembunyikan formulir
-    const signupForm = document.getElementById('signupForm');
-    signupForm.style.display = 'none';
-
-    // Menampilkan animasi loading
-    const loadingAnimation = document.getElementById('loadingAnimation');
-    loadingAnimation.classList.remove('is-hidden');
-
     // Mengambil nilai dari elemen input pada HTML
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -18,6 +10,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         Username: username,
         Password: password,
         Role: "user"
+
     };
 
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
@@ -35,46 +28,40 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
             throw new Error('Pendaftaran gagal');
         }
     })
+
+    
     .then(data => {
         // Handle respons dari server (misalnya, tampilkan pesan sukses)
         console.log('Pendaftaran berhasil:', data);
-
-        signupForm.style.display = 'block';
-
-        // Sembunyikan animasi loading setelah pendaftaran selesai
-        loadingAnimation.classList.add('is-hidden');
-
-        // Menyembunyikan
+    
+        // Menyembunyikan formulir setelah pendaftaran berhasil
         const username = document.getElementById('username');
-        username.classList.add('is-hidden');
+        username.style.display = 'none';
 
         const password = document.getElementById('password');
-        password.classList.add('is-hidden');
+        password.style.display = 'none';
 
         const btnSignup = document.getElementById('btnSignup');
-        btnSignup.classList.add('is-hidden');
+        btnSignup.style.display = 'none';
 
         const hrefSignin = document.getElementById('hrefSignin');
-        hrefSignin.classList.add('is-hidden');
-
-
+        hrefSignin.style.display = 'none';
+    
         // Menampilkan notifikasi
         const notification = document.getElementById('notification');
         notification.classList.remove('is-hidden');
 
-        // Menampilkan tombol "Ke Halaman Login"
+        // Menampilkan logindisini
         const btnLoginDisini = document.getElementById('btnLoginDisini');
         btnLoginDisini.classList.remove('is-hidden');
+    
+        // Redirect ke halaman login setelah pendaftaran berhasil
+        // window.location.href = '../theme/admin-dashboard.html'; // Ganti dengan nama file halaman login yang sesuai
     })
+    
+    
     .catch(error => {
         // Handle kesalahan (misalnya, tampilkan pesan kesalahan)
-
-        // Sembunyikan animasi loading setelah pendaftaran gagal
-        loadingAnimation.classList.add('is-hidden');
-
-        // Menampilkan kembali formulir jika pendaftaran gagal
-        signupForm.style.display = 'block';
-
         console.error('Pendaftaran error:', error);
     });
 });
