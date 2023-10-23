@@ -33,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.json())
                 .then(userList => {
                     const user = userList.find(user => user.username === username);
+
+
                     if (user) {
+                        
                         // User found, navigate to the dashboard
                         window.location.href = "../theme/admin-dashboard.html";
                     } else {
@@ -50,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 .then(response => response.json())
                 .then(userList => {
                     const user = userList.find(user => user.username === username);
+
+
                     if (user) {
                         // User found, navigate to the dashboard
                         window.location.href = "../theme/user.html";
