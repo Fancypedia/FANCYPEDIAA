@@ -1,18 +1,26 @@
 document.getElementById('signupForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // Menyembunyikan formulir
+    const signupForm = document.getElementById('signupForm');
+    signupForm.style.display = 'none';
+
+    // Menampilkan animasi loading
+    const loadingAnimation = document.getElementById('loadingAnimation');
+    loadingAnimation.classList.remove('is-hidden');
+
     // Mengambil nilai dari elemen input pada HTML
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    console.log('Pendaftaran berhasil:', username);
 
     // Membuat objek yang berisi data pendaftaran pengguna
     const userData = {
         Username: username,
         Password: password,
         Role: "user"
-
     };
-
+    console.log('Username', userData);
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
     fetch('https://asia-southeast2-testlogin-366704.cloudfunctions.net/postuser', {
         method: 'POST',
@@ -28,40 +36,46 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
             throw new Error('Pendaftaran gagal');
         }
     })
-
-    
     .then(data => {
         // Handle respons dari server (misalnya, tampilkan pesan sukses)
         console.log('Pendaftaran berhasil:', data);
-    
-        // Menyembunyikan formulir setelah pendaftaran berhasil
+
+        signupForm.style.display = 'block';
+
+        // Sembunyikan animasi loading setelah pendaftaran selesai
+        loadingAnimation.classList.add('is-hidden');
+
+        // Menyembunyikan
         const username = document.getElementById('username');
-        username.style.display = 'none';
+        username.classList.add('is-hidden');
 
         const password = document.getElementById('password');
-        password.style.display = 'none';
+        password.classList.add('is-hidden');
 
         const btnSignup = document.getElementById('btnSignup');
-        btnSignup.style.display = 'none';
+        btnSignup.classList.add('is-hidden');
 
         const hrefSignin = document.getElementById('hrefSignin');
-        hrefSignin.style.display = 'none';
-    
+        hrefSignin.classList.add('is-hidden');
+
+
         // Menampilkan notifikasi
         const notification = document.getElementById('notification');
         notification.classList.remove('is-hidden');
 
-        // Menampilkan logindisini
+        // Menampilkan tombol "Ke Halaman Login"
         const btnLoginDisini = document.getElementById('btnLoginDisini');
         btnLoginDisini.classList.remove('is-hidden');
-    
-        // Redirect ke halaman login setelah pendaftaran berhasil
-        // window.location.href = '../theme/admin-dashboard.html'; // Ganti dengan nama file halaman login yang sesuai
     })
-    
-    
     .catch(error => {
         // Handle kesalahan (misalnya, tampilkan pesan kesalahan)
+
+        // Sembunyikan animasi loading setelah pendaftaran gagal
+        loadingAnimation.classList.add('is-hidden');
+
+        // Menampilkan kembali formulir jika pendaftaran gagal
+        signupForm.style.display = 'block';
+
         console.error('Pendaftaran error:', error);
     });
 });

@@ -12,6 +12,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     // Mengambil nilai dari elemen input pada HTML
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    console.log('Pendaftaran berhasil:', username);
 
     // Membuat objek yang berisi data pendaftaran pengguna
     const userData = {
@@ -19,7 +20,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         Password: password,
         Role: "user"
     };
-
+    console.log('Username', userData);
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
     fetch('https://asia-southeast2-testlogin-366704.cloudfunctions.net/postuser', {
         method: 'POST',
@@ -45,10 +46,10 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         loadingAnimation.classList.add('is-hidden');
 
         // Menyembunyikan
-        const username = document.getElementById('username');
+        const username = document.getElementById('field-username');
         username.classList.add('is-hidden');
 
-        const password = document.getElementById('password');
+        const password = document.getElementById('field-password');
         password.classList.add('is-hidden');
 
         const btnSignup = document.getElementById('btnSignup');
