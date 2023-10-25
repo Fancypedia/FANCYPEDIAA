@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (user) {
                         
                         // User found, navigate to the dashboard
-                        window.location.href = "../theme/admin-dashboard.html";
+                        window.location.href = "../choices.html";
                     } else {
                         // User not found
                         message.textContent = "User not found in the database.";
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     if (user) {
                         // User found, navigate to the dashboard
-                        window.location.href = "../theme/user.html";
+                        window.location.href = "../user/user.html";
                     } else {
                         // User not found
                         message.textContent = "User not found in the database.";
