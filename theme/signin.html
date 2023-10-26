@@ -138,8 +138,14 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-4">
-					<form id="login-form" action="" class="box">
-						<div class="field">
+
+					<div id="loadingAnimation" class="loading-animation is-hidden">
+						<img style="border-radius: 50%;" src="https://i.pinimg.com/originals/fd/ed/17/fded1765432df670e8dce05020ad58a1.gif" alt="Loading...">
+					</div>
+
+					<form id="loginForm" action="" class="box">
+
+						<div id="field-username" class="field">
 							<label class="label">
 								Username
 							</label>
@@ -150,7 +156,7 @@
 								</span>
 							</div>
 						</div>
-						<div class="field">
+						<div id="field-password" class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
 								<input id="password" type="password" class="input" placeholder="password" required>
@@ -159,15 +165,20 @@
 								</span>
 							</div>
 						</div>
+
 						<p id="message"></p>
+
 						<div class="field">
 						</div>
-						<div class="field">
+
+						<div id="btnLogin" class="field">
 							<button class="button" style="background: #F8A556;">Login</button>
 						</div>
-						<div class="row">
+
+						<div id="hrefSignup" class="row">
 							<small>Don't have account? <a href="./signup.html" style="color: #F8A556;">Sign Up</a></small>
 						</div>
+
 					</form>
 				</div>
 			</div>
