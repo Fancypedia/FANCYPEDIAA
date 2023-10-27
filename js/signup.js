@@ -22,7 +22,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     };
     console.log('Username', userData);
     // Kirim permintaan HTTP (pendaftaran) dengan data pengguna
-    fetch('https://us-central1-testlogin-366704.cloudfunctions.net/gg', {
+    fetch('https://us-central1-testlogin-366704.cloudfunctions.net/gg-1', {
         method: 'POST',
         body: JSON.stringify(userData),
         headers: {
