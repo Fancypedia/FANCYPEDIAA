@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 message.style.color = "green";
                 console.log("Login successful");
                 console.log("Token:", token);
-                window.location.href = "../user/user.html";
+                window.location.href = "https://fancypedia.github.io/user/";
 
             } else {
                 // Handle the case when authentication fails
