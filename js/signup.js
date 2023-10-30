@@ -58,7 +58,7 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
         const hrefSignin = document.getElementById('hrefSignin');
         hrefSignin.classList.add('is-hidden');
 
-
+        
         // Menampilkan notifikasi
         const notification = document.getElementById('notification');
         notification.classList.remove('is-hidden');
