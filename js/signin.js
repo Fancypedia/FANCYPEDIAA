@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 message.style.color = "green";
                 console.log("Login successful");
                 console.log("Token:", token);
+            
+                // Display the token in a specified div
+                const tokenDisplay = document.getElementById("tokenDisplay");
+                tokenDisplay.textContent = `Your token is: ${token}`;
+            
                 window.location.href = "https://fancypedia.github.io/user/";
             } else {
                 // Handle the case when authentication fails
