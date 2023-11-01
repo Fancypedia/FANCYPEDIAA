@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loginForm.addEventListener("submit", function(event) {
         event.preventDefault();
-
+        
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        // Send a POST request to the updated authentication API with the "user" role
+        // Kirim permintaan POST ke API
         fetch("https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy", {
             method: "POST",
             headers: {
@@ -18,25 +18,26 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             body: JSON.stringify({
                 username: username,
-                password: password,
+                password: password
             })
         })
-        .then(response => response.text()) // Read response as text
+        .then(response => response.json())
         .then(data => {
-            if (data === true) {
+            if (data.status === true) {
+                // Pengolahan respons setelah login berhasil
                 const token = data.token;
-                message.textContent = "Login successful";
+                const welcomeMessage = data.message;
+                message.textContent = welcomeMessage;
                 setCookieWithExpireHour("token",token,2);
                 message.style.color = "green";
-                console.log("Login successful");
-                console.log("Token:", token);
-                window.location.href = "https://fancypedia.github.io/user/";
+                console.log(token);
 
+                // Redirect ke halaman dashboard setelah login berhasil
+                window.location.href = "https://fancypedia.github.io/user/";
             } else {
-                // Handle the case when authentication fails
-                message.textContent = "Authentication failed.";
+                // Pengolahan respons jika login gagal
+                message.textContent = "Login failed. Please check your username and password.";
                 message.style.color = "red";
-                console.log("Login gagal");
             }
         })
         .catch(error => {
