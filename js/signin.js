@@ -1,3 +1,5 @@
+import {setCookieWithExpireHour} from "https://jscroot.github.io/cookie/croot.js";
+
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.getElementById("loginForm");
     const message = document.getElementById("message");
@@ -19,21 +21,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 password: password,
             })
         })
-        .then(response => response.json()) // Parse response as JSON
+        .then(response => response.text()) // Read response as text
         .then(data => {
-            if (data.status && data.message === "Berhasil Login") {
-                const token = data.data.private;
+            if (data === "Login successful") {
+                const token = data.token;
                 message.textContent = "Login successful";
-                document.cookie = `token=${token}; max-age=${2 * 60 * 60}`; // Set cookie for 2 hours
+                setCookieWithExpireHour("token",token,2);
                 message.style.color = "green";
                 console.log("Login successful");
                 console.log("Token:", token);
-            
-                // Display the token in a specified div
-                const tokenDisplay = document.getElementById("tokenDisplay");
-                tokenDisplay.textContent = `Your token is: ${token}`;
-            
                 window.location.href = "https://fancypedia.github.io/user/";
+
             } else {
                 // Handle the case when authentication fails
                 message.textContent = "Authentication failed.";
