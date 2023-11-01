@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = document.getElementById("password").value;
 
         // Send a POST request to the updated authentication API with the "user" role
-        fetch("https://asia-southeast2-testlogin-366704.cloudfunctions.net/createcontent-11", {
+        fetch("https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
