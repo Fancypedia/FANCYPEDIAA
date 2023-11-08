@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="flex justify-center">
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-screen-lg"> -->
+            <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        <!-- </div> -->
+    </div>
+
+    <script>
+        // Fetch data from the API and populate the product details
+        fetch('https://asia-southeast2-testlogin-366704.cloudfunctions.net/getallproduct')
+            .then(response => response.json())
+            .then(data => {
+                const productList = document.getElementById('productList');
+
+                data.data.filter(item => item.status).forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'bg-white rounded-lg shadow-md overflow-hidden w-full lg:w-72 p-4 '; // Added padding for space around each product card
+
+                    productCard.innerHTML = `
+                        <img src="${product.image}" alt="Product Image" class="w-full">
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">${product.name}</h2>
+                            <p class="text-gray-600 mb-4">${product.description}</p>
+                            <p class="text-gray-800 font-bold mb-2">Price: $${product.price}</p>
+                            <p class="text-gray-800 font-bold mb-2">Size: ${product.size}</p>
+                            <p class="text-gray-800 font-bold mb-2">Stock: ${product.stock}</p>
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Add to Cart
+                            </button>
+                        </div>
+                    `;
+
+                    productList.appendChild(productCard);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
