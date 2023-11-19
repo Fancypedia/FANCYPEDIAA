@@ -57,7 +57,7 @@ import { setCookieWithExpireHour } from "./cookies.js";
 export default function LoginUser(){
     let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy";
     let tokenkey = "token";
-    let tokenvalue = "0848bcd8b04e68a2832c6dbee4740fc90a80f959563fb2a22c56400a546026c08650f7aa1049858d409f295f5452614416008fda3ffe095998cc77ed2e33d6b3"; //privatekey
+    let tokenvalue = "27ff1dc8318af1c02d3725eced24d0cbe231f50303d146f91a5608bdb61c04ab"; //publickey
     let datainjson = {
         "username": getValue("usernamelogin"),
         "password": getValue("passwordlogin")
