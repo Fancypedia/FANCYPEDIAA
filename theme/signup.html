@@ -110,11 +110,12 @@
 						<img style="border-radius: 50%;" src="https://i.pinimg.com/originals/fd/ed/17/fded1765432df670e8dce05020ad58a1.gif" alt="Loading...">
 					</div>
 
-					<form id="signupForm" class="box">
+					<!-- START FORM -->
+					<div id="signupForm" class="box">
 						<div id="field-username" class="field">
 							<label class="label">Username</label>
 							<div class="control has-icons-left">
-								<input id="username" type="username" class="input" placeholder="username" required>
+								<input id="usernamesignup" type="username" class="input" placeholder="username" required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-envelope"></i>
 								</span>
@@ -124,7 +125,7 @@
 						<div id="field-password" class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
-								<input id="password" type="password" class="input" placeholder="password"required>
+								<input id="passwordsignup" type="password" class="input" placeholder="password"required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-lock"></i>
 								</span>
@@ -147,7 +148,9 @@
 							<button class="button" type="submit" style="background: #F8A556;">Ke Halaman Login</button>
 						</div>
 				
-					</form>
+					</div>
+					<!-- END FORM -->
+
 				</div>
 
 			</div>
@@ -261,9 +264,11 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script type="module" src="js/script.js"></script>
-    <script type="module" src="../js/signup.js"></script>
+    <!-- <script type="module" src="../js/signup.js"></script> -->
 
-	<script type="module" src="../js/postsignup.js"></script>
+	<!-- <script type="module" src="../js/postsignup.js"></script> -->
+
+	<script type="module" src="../js/mainLoginRegis.js"></script>
 
   </body>
   </html>

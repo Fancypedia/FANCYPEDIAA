@@ -55,9 +55,9 @@ import { setInner,getValue } from "./element.js";
 import { setCookieWithExpireHour } from "./cookies.js";
 
 export default function LoginUser(){
-    let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-fancy-baru";
+    let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy";
     let tokenkey = "token";
-    let tokenvalue = "694e07bfc2793b6dbfb5eef91c646bd7d168e39fabfc704bb13d3edcdbd03cf2"; //publickey
+    let tokenvalue = "0848bcd8b04e68a2832c6dbee4740fc90a80f959563fb2a22c56400a546026c08650f7aa1049858d409f295f5452614416008fda3ffe095998cc77ed2e33d6b3"; //privatekey
     let datainjson = {
         "username": getValue("usernamelogin"),
         "password": getValue("passwordlogin")
