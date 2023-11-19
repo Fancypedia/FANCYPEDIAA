@@ -75,6 +75,6 @@ function responseData(result) {
         alert("Password Salah");
     }
     if (result.message == "Selamat Datang") {
-        window.location.href = "./admin/dashboard/";
+        window.location.href = "https://fancypedia.my.id/user/";
     }
 }
