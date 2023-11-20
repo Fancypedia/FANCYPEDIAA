@@ -7,6 +7,6 @@ export default function checkCookie() {
 	alert("Welcome " + username);
 	} else {
 		alert("Biasakan Login Dulu Ya Bang!")
-		window.location.href="../theme/signin/";
+		window.location.href="../theme/signin/index.html";
 	}
 }
