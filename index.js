@@ -1,1 +1,0 @@
-document.write("coba aja dulu")
