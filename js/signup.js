@@ -1,3 +1,27 @@
+import { postBiasa } from "./api.js";
+import { getValue } from "./element.js";
+
+export default function RegistrasiUser() {
+    let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-1fancy";
+    let datainjson = {
+        "username": getValue("usernamesignup"),
+        "password": getValue("passwordsignup")
+    }
+    postBiasa(target_url, datainjson, responseData);
+}
+
+function responseData(result) {
+    if (result.message == "Username telah dipakai") {
+        alert("Username telah dipakai");
+    }
+    if (result.message == "Gagal Hash Password") {
+        alert("Gagal Hash Password");
+    }
+    if (result.message == "Berhasil Input data") {
+        alert("Berhasil Registrasi");
+    }
+}
+
 // import { postBiasa } from "./api.js";
 // import { setInner,getValue } from "./element.js";
 
@@ -41,46 +65,46 @@
 //         }
 //     })
 //     .then(data => {
-//         // Handle respons dari server (misalnya, tampilkan pesan sukses)
-//         console.log('Pendaftaran berhasil:', data);
+        // Handle respons dari server (misalnya, tampilkan pesan sukses)
+        // console.log('Pendaftaran berhasil:', data);
 
-//         signupForm.style.display = 'block';
+        // signupForm.style.display = 'block';
 
-//         // Sembunyikan animasi loading setelah pendaftaran selesai
-//         loadingAnimation.classList.add('is-hidden');
+        // // Sembunyikan animasi loading setelah pendaftaran selesai
+        // loadingAnimation.classList.add('is-hidden');
 
-//         // Menyembunyikan
-//         const username = document.getElementById('field-username');
-//         username.classList.add('is-hidden');
+        // // Menyembunyikan
+        // const username = document.getElementById('field-username');
+        // username.classList.add('is-hidden');
 
-//         const password = document.getElementById('field-password');
-//         password.classList.add('is-hidden');
+        // const password = document.getElementById('field-password');
+        // password.classList.add('is-hidden');
 
-//         const btnSignup = document.getElementById('btnSignup');
-//         btnSignup.classList.add('is-hidden');
+        // const btnSignup = document.getElementById('btnSignup');
+        // btnSignup.classList.add('is-hidden');
 
-//         const hrefSignin = document.getElementById('hrefSignin');
-//         hrefSignin.classList.add('is-hidden');
+        // const hrefSignin = document.getElementById('hrefSignin');
+        // hrefSignin.classList.add('is-hidden');
 
         
-//         // Menampilkan notifikasi
-//         const notification = document.getElementById('notification');
-//         notification.classList.remove('is-hidden');
+        // // Menampilkan notifikasi
+        // const notification = document.getElementById('notification');
+        // notification.classList.remove('is-hidden');
 
-//         // Menampilkan tombol "Ke Halaman Login"
-//         const btnLoginDisini = document.getElementById('btnLoginDisini');
-//         btnLoginDisini.classList.remove('is-hidden');
+        // // Menampilkan tombol "Ke Halaman Login"
+        // const btnLoginDisini = document.getElementById('btnLoginDisini');
+        // btnLoginDisini.classList.remove('is-hidden');
 //     })
 //     .catch(error => {
-//         // Handle kesalahan (misalnya, tampilkan pesan kesalahan)
+        // // Handle kesalahan (misalnya, tampilkan pesan kesalahan)
 
-//         // Sembunyikan animasi loading setelah pendaftaran gagal
-//         loadingAnimation.classList.add('is-hidden');
+        // // Sembunyikan animasi loading setelah pendaftaran gagal
+        // loadingAnimation.classList.add('is-hidden');
 
-//         // Menampilkan kembali formulir jika pendaftaran gagal
-//         signupForm.style.display = 'block';
+        // // Menampilkan kembali formulir jika pendaftaran gagal
+        // signupForm.style.display = 'block';
 
-//         console.error('Pendaftaran error:', error);
+        // console.error('Pendaftaran error:', error);
 //     });
 // });
 
@@ -92,31 +116,5 @@
 //     // Redirect ke halaman login
 //     window.location.href = '../theme/signin.html'; // Ganti dengan nama file halaman login yang sesuai
 // });
-
-
-import { postBiasa } from "./api.js";
-import { setInner, getValue } from "./element.js";
-
-export default function RegistrasiUser() {
-    let target_url = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-1fancy";
-    let datainjson = {
-        "username": getValue("usernamesignup"),
-        "password": getValue("passwordsignup")
-    };
-    postBiasa(target_url, datainjson, responseData);
-}
-
-function responseData(result) {
-    setInner("message", result.message);
-    if (result.message == "Username telah dipakai") {
-        alert("Username telah dipakai");
-    }
-    if (result.message == "Gagal Hash Password") {
-        alert("Gagal Hash Password");
-    }
-    if (result.message == "Berhasil Input data") {
-        alert("Berhasil Registrasi");
-    }
-}
 
 
