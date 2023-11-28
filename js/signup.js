@@ -5,14 +5,8 @@ import { APIRegistrasi } from "./gudangAPI.js"
 const loadingIndicator = document.getElementById("loadingIndicator");
 
 export default function RegistrasiUser(){
-    let name = getValue("name");
-    let email = getValue("email");
-    let username = getValue("username");
-    let password = getValue("password");
-    if (email && !(email.endsWith("@gmail.com") || email.endsWith("@std.ulbi.ac.id") || email.endsWith("@ulbi.ac.id"))) {
-        alert("Format email tidak benar");
-        return; // Stop execution if the email format is not valid
-    }
+    let username = getValue("usernamesignup");
+    let password = getValue("passwordsignup");
     if (!username) {
         alert("Username perlu diisi");
         return; // Stop execution if the fields are not filled
@@ -32,13 +26,8 @@ export default function RegistrasiUser(){
 
 function responseData(result) {
     loadingIndicator.style.display = "none";
-    if (result.message == "Username telah dipakai") {
-        alert("Username telah dipakai");
-    }
-    if (result.message == "Gagal Hash Password") {
-        alert("Gagal Hash Password");
-    }
     if (result.message == "Berhasil Input data") {
-        window.location.href = "../login";
+        alert("berhasil register")
+        window.location.href = "../signin/index.html";
     }
 }
