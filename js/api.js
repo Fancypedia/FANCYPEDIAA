@@ -1,6 +1,5 @@
-export function postWithToken(target_url,tokenkey,tokenvalue,datajson,responseFunction){
+export function postBiasa(target_url,datajson,responseFunction){
     var myHeaders = new Headers();
-    myHeaders.append(tokenkey, tokenvalue);
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify(datajson);
@@ -18,16 +17,9 @@ export function postWithToken(target_url,tokenkey,tokenvalue,datajson,responseFu
     .catch(error => console.log('error', error));
 }
 
-export function postBiasa(target_url,datajson,responseFunction){
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify(datajson);
-
+export function get(target_url,responseFunction){
     var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
+    method: 'GET',
     redirect: 'follow'
     };
 

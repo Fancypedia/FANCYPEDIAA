@@ -111,9 +111,7 @@
 					<div id="loginForm" action="" class="box">
 
 						<div id="field-username" class="field">
-							<label class="label">
-								Username
-							</label>
+							<label class="label">Username</label>
 							<div class="control has-icons-left">
 								<input id="usernamelogin" name="usernamelogin" type="text" class="input" placeholder="username" required>
 								<span class="icon is-small is-left">
@@ -121,6 +119,7 @@
 								</span>
 							</div>
 						</div>
+
 						<div id="field-password" class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
@@ -133,12 +132,14 @@
 
 						<p id="message"></p>
 
-						<div class="field">
+						<div id="btnLogin" class="field">
+							<button type="submit" class="button" onclick="LoginUser()" style="background: #F8A556;">Login</button>
 						</div>
 
-						<div id="btnLogin" class="field">
-							<button class="button" onclick="LoginUser()" style="background: #F8A556;">Login</button>
-						</div>
+						<!-- Loading indicator -->
+						<div class="absolutecenter">
+							<div id="loadingIndicator" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+						 </div>
 
 						<div id="hrefSignup" class="row">
 							<small>Don't have account? <a href="../../theme/signup/index.html" style="color: #F8A556;">Sign Up</a></small>
@@ -258,12 +259,9 @@
     <script type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script type="module" src="../js/script.js"></script>
-    <!-- <script type="module" src="../../js/signin.js"></script> -->
 
-	<!-- <script type="module" src="../js/postsignup.js"></script> -->
+	<script type="module" src="../../js/main.js"></script>
 
-	<!-- <script type="module" src="../../js/mainLoginRegis.js"></script> -->
-
-	<script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs/mainLoginRegis.js"></script>
+	<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs/mainLoginRegis.js"></script> -->
   </body>
   </html>
