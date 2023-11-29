@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(token);
                 console.log(welcomeMessage);
                 
-
                 // Menampilkan popup untuk memilih CMS atau adminDashboard
                 const dashboardSelectionPopup = document.getElementById("dashboardSelectionPopup");
                 dashboardSelectionPopup.style.display = "block";
