@@ -1,6 +1,6 @@
 import { postBiasa } from "./api.js";
 import { getValue } from "./element.js";
-import { APIRegistrasi } from "./gudangAPI.js"
+import { APIRegistrasi } from "./gudangAPI.js";
 
 const loadingIndicator = document.getElementById("loadingIndicator");
 
