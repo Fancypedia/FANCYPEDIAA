@@ -32,7 +32,7 @@ export default function RegistrasiUser(){
 
 function responseData(result) {
     loadingIndicator.style.display = "none";
-    if (result.message == "Berhasil Input data") {
+    if (result.message == "Berhasil Input Data") {
         alert("berhasil register")
         window.location.href = "../signin/index.html";
     }
