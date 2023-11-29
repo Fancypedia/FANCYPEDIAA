@@ -53,7 +53,7 @@ function responseData(data) {
         setCookieWithExpireHour("password", password, 2);
 
         // Redirecting to another page
-        window.location.href = "../../user";
+        window.location.href = "https://fancypedia.my.id/user/";
 
         // Logging some information
         console.log("Password:", password);
