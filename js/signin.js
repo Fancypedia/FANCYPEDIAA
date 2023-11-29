@@ -1,7 +1,7 @@
 import { postBiasa } from "./api.js";
 import { getValue } from "./element.js";
-import { setCookieWithExpireSecond } from "./cookies.js";
-import { APILogin } from "./gudangAPI.js"
+import { setCookieWithExpireHour } from "./cookies.js";
+import { loginuserbarunowa } from "./gudangAPI.js"
 
 const loadingIndicator = document.getElementById("loadingIndicator");
 
@@ -22,14 +22,42 @@ export default function LoginUser(){
     }
     loadingIndicator.style.display = "block";
 
-    postBiasa(APILogin,datainjson,responseData);
+    postBiasa(loginuserbarunowa,datainjson,responseData);
 
 }
 
-function responseData(result) {
+// function responseData(data) {
+//     loadingIndicator.style.display = "none";
+//     if (data.message == "Selamat Datang") {
+//         const token = data.token;
+//         setCookieWithExpireHour("token",token,2);
+//         window.location.href = "../../user";
+//         console.log(token);
+//     } 
+// }
+
+function responseData(data) {
     loadingIndicator.style.display = "none";
-    if (result.message == "Selamat Datang") {
-        setCookieWithExpireSecond("token", result.token, 1);
+
+    if (data.status === true && data.message === "Berhasil Login") {
+        const userData = data.data;
+
+        // Accessing individual properties from the data object
+        const password = userData.Password;
+        const privateInfo = userData.Private;
+        const publicInfo = userData.Publick; // Note: Typo in the property name ("Publick" instead of "Public")
+
+        // You can use the extracted data as needed
+
+        // For example, setting a cookie
+        setCookieWithExpireHour("password", password, 2);
+
+        // Redirecting to another page
         window.location.href = "../../user";
+
+        // Logging some information
+        console.log("Password:", password);
+        console.log("Private Info:", privateInfo);
+        console.log("Public Info:", publicInfo);
     } 
 }

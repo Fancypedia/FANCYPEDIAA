@@ -4,3 +4,9 @@ export let APILogin = "https://asia-southeast2-annular-hexagon-401501.cloudfunct
 
 // export let Authloginbaru = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/loginbaru";
 export let bismillahcontentall = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/bismillahcontentall";
+
+//signup
+export let userbarunowa = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/createacountfix";
+
+//signin
+export let loginuserbarunowa = "https://asia-southeast2-testlogin-366704.cloudfunctions.net/login";
