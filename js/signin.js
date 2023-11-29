@@ -9,7 +9,7 @@ export default function LoginUser(){
     let username = getValue("usernamelogin");
     let password = getValue("passwordlogin");
     if (!username) {
-        alert("Username perlu diisi");
+        alert("Username perlu untuk diisi");
         return; // Stop execution if the fields are not filled
     }
     if (!password) {
