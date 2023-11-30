@@ -1,12 +1,4 @@
 <!doctype html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en">
   <head>
   <!-- Required meta tags -->
@@ -17,7 +9,7 @@
   <meta name="author" content="themefisher.com">
     
   <!-- theme meta -->
-  <meta name="theme-name" content="wishfund-bulma"/>
+  <meta name="theme-name" content="wishfund-bulma" />
 
   <title>Fancypedia</title>
 
@@ -60,7 +52,7 @@
 						<a href="#" target="_blank"><i class="icofont-pinterest"></i></a>
 						<a href="#" target="_blank"><i class="icofont-linkedin"></i></a> -->
 						<a href="https://www.instagram.com/fancypedia_id" target="_blank"><i class="icofont-instagram"> Instragram</i></a>
-						<a href="../../theme/signin/index.html" class="top-btn">Sign In</a>
+						<a href="#" class="top-btn">Sign In</a>
 					</div>
 				</div>
 			</div>
@@ -87,11 +79,11 @@
 					</li>
 					
 					<li class="navbar-item">
-						<a class="navbar-link" href="../../theme/about.html">About</a>
+						<a class="navbar-link" href="../../pages/about.html">About</a>
 					</li>
 
 					<li class="navbar-item">
-						<a class="navbar-link" href="../../theme/contact.html">Contact</a>
+						<a class="navbar-link" href="../../pages/contact.html">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -103,43 +95,37 @@
 	<div class="hero-body">
 		<div class="container">
 			<div class="columns is-centered">
-
 				<div class="column is-4">
 
+					<!-- <div id="tokenDisplay"></div> -->
+
 					<!-- START FORM -->
-					<div id="signupForm" class="box">
+					<div id="loginForm" action="" class="box">
+
 						<div id="field-username" class="field">
 							<label class="label">Username</label>
 							<div class="control has-icons-left">
-								<input id="usernamesignup" name="usernamesignup" type="username" class="input" placeholder="username" required>
+								<input id="usernamelogin" name="usernamelogin" type="text" class="input" placeholder="username" required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-envelope"></i>
 								</span>
 							</div>
 						</div>
-						
+
 						<div id="field-password" class="field">
 							<label class="label">Password</label>
 							<div class="control has-icons-left">
-								<input id="passwordsignup" name="passwordsignup" type="password" class="input" placeholder="password"required>
+								<input id="passwordlogin" name="passwordlogin" type="password" class="input" placeholder="password" required>
 								<span class="icon is-small is-left">
 									<i class="fa fa-lock"></i>
 								</span>
 							</div>
 						</div>
 
-						<div id="field-nowa" class="field">
-							<label class="label">No whatsapp</label>
-							<div class="control has-icons-left">
-								<input id="nowa" name="nowa" type="number" class="input" placeholder="62"required>
-								<span class="icon is-small is-left">
-									<i class="fa fa-lock"></i>
-								</span>
-							</div>
-						</div>
+						<p id="message"></p>
 
-						<div id="btnSignup" class="field">
-							<button class="button" type="submit" onclick="RegistrasiUser()" style="background: #F8A556;">Signup </button>
+						<div id="btnLogin" class="field">
+							<button type="submit" class="button" onclick="LoginUser()" style="background: #F8A556;">Login</button>
 						</div>
 
 						<!-- Loading indicator -->
@@ -147,8 +133,8 @@
 							<div id="loadingIndicator" class="loader"></div>
 						 </div>
 
-						<div id="hrefSignin" class="row">
-							<small>Already have an account? <a href="../../theme/signin/index.html" style="color: #F8A556;">Sign In</a></small>
+						<div id="hrefSignup" class="row">
+							<small>Don't have account? <a href="../../pages/signup/index.html" style="color: #F8A556;">Sign Up</a></small>
 						</div>
 
 					</div>
@@ -159,7 +145,6 @@
 		</div>
 	</div>
 </div>
-
 
 
 
@@ -184,9 +169,9 @@
 					<h4 class="is-capitalize mb-4 text-white">Quick Links</h4>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="../../theme/about.html">About</a></li>
-						<li><a href="../../theme/about.html#section_team">Team</a></li>
-						<li><a href="../../theme/contact.html#section_contact">Contact</a></li>
+						<li><a href="../../pages/about.html">About</a></li>
+						<li><a href="../../pages/about.html#section_team">Team</a></li>
+						<li><a href="../../pages/contact.html#section_contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -263,15 +248,12 @@
 
     <!-- Google Map -->
     <script type="module" src="../plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+    <script type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
     <script type="module" src="../js/script.js"></script>
-    <!-- <script type="module" src="../js/signup.js"></script> -->
 
-	<!-- <script type="module" src="../js/postsignup.js"></script> -->
-
-	<!-- <script type="module" src="../../js/mainLoginRegis.js"></script> -->
 	<script type="module" src="../../js/main.js"></script>
 
+	<!-- <script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.0.9/main.js"></script> -->
   </body>
   </html>
