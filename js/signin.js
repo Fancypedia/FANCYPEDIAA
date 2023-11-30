@@ -43,6 +43,7 @@ function responseData(data) {
         const userData = data.data;
 
         // Accessing individual properties from the data object
+        const username = userData.Username;
         const password = userData.Password;
         const privateInfo = userData.Private;
         const publicInfo = userData.Publick; // Note: Typo in the property name ("Publick" instead of "Public")
@@ -50,12 +51,13 @@ function responseData(data) {
         // You can use the extracted data as needed
 
         // For example, setting a cookie
-        setCookieWithExpireHour("password", password, 2);
+        setCookieWithExpireHour("username", username, 2);
 
         // Redirecting to another page
         window.location.href = "https://fancypedia.my.id/user/";
 
         // Logging some information
+        console.log("Username:", username);
         console.log("Password:", password);
         console.log("Private Info:", privateInfo);
         console.log("Public Info:", publicInfo);
