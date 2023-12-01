@@ -48,7 +48,7 @@ function responseData(data) {
         setCookieWithExpireHour("token", token, 2);
 
         // Logging some information
-        console.log("Token:", token);
+        console.log("token", token);
 
         // Additional actions you may want to perform
 
@@ -56,6 +56,6 @@ function responseData(data) {
         window.location.href = "https://fancypedia.my.id/cms/";
     } else {
         // Handle the case where login is not successful
-        console.error("Login failed. Status:", data.status, "Message:", data.message);
+        console.error("Login failed. Status:", data.status, "Message:", data.token);
     }
 }
