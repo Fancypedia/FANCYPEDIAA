@@ -1,12 +1,5 @@
 <!doctype html>
 
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en">
   <head>
   <!-- Required meta tags -->
@@ -56,11 +49,6 @@
 				</div>
 				<div class="column is-6-desktop is-8-tablet">
 					<div class="header-top-right has-text-right-tablet has-text-centered-mobile">
-						<!-- <a href="https://www.facebook.com/themefisher" target="_blank"><i class="icofont-facebook"></i></a>
-						<a href="https://twitter.com/themefisher" target="_blank"><i class="icofont-twitter"></i></a>
-						<a href="https://github.com/themefisher/" target="_blank"><i class="icofont-github"></i></a>
-						<a href="#" target="_blank"><i class="icofont-pinterest"></i></a>
-						<a href="#" target="_blank"><i class="icofont-linkedin"></i></a> -->
 						<a href="https://www.instagram.com/fancypedia_id" target="_blank"><i class="icofont-instagram"> Instragram</i></a>
 						<a href="pages/signin/" class="top-btn">Sign In</a>
 					</div>
@@ -68,7 +56,7 @@
 			</div>
 		</div>
 	</div>
-	<nav id="navbar" class="navbar main-nav">
+	<nav id="navbar" class="navbar main-nav has-navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="index.html">
@@ -110,7 +98,31 @@
 					<span class="is-block mb-4 text-white is-capitalized">Discover Elegance in the World of Programming</span>
 					<h1 class="mb-5">New design <br>near future</h1>
 					<p class="mb-6">Elevate Your Code, Elevate Your Style! Unparalleled Quality, <br>Unmatched Elegance in Programming Fashion</p>
-					<a href="" target="_blank" class="btn btn-main is-rounded">Our Collection</a>
+
+					<button class="js-modal-trigger btn btn-main is-rounded" data-target="ourcollection" >
+						OUR COLLECTION
+					</button>
+
+					<!-- DATA TARGET -->
+					<div id="ourcollection" class="modal">
+						<div class="modal-background"></div>
+						<div class="modal-card">
+							<header class="modal-card-head">
+							<p style="font-weight: bold; color: black;" class="modal-card-title">Our Collection</p>
+							<button class="delete" aria-label="close"></button>
+							</header>
+							<section class="modal-card-body">
+							<!-- Content ... -->
+							"Untuk melihat koleksi produk kami di Fancypedia, Anda dapat masuk terlebih dahulu melalui menu sign-in yang terletak di pojok kanan atas halaman. <span style="font-weight: bold;">Atau pada tombol dibawah ini"</span>
+							</section>
+							<footer class="modal-card-foot">
+							<a style="background-color: #F89D35;" href="pages/signin/" class="button">Signin</a>
+							<button class="button">Close</button>
+							</footer>
+						</div>
+					</div>
+
+					<!-- <a href="" target="_blank" class="btn btn-main is-rounded">Our Collection</a> -->
 				</div>
 			</div>
 		</div>
@@ -328,7 +340,21 @@
 						</ul>
 						<p class="card-text mb-5">We design shirts with a creative Go (Golang) programming language logo on the front.</p>
 
-						<a class="btn btn-main is-rounded">VIEW THIS PRODUCT</a>
+						<button class="js-modal-trigger btn btn-main is-rounded" data-target="Product1" >
+							VIEW THIS PRODUCT
+						</button>
+
+						<!-- DATA TARGET -->
+						<div id="Product1" class="modal">
+							<div class="modal-background"></div>
+							<div class="modal-content">
+								<p class="image is-4by3">
+								<img src="pages/images/about/image-1.jpg" alt="">
+								</p>
+							</div>
+							<button class="modal-close is-large" aria-label="close"></button>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -345,7 +371,21 @@
 						</ul>
 						<p class="card-text mb-5">We design the back of shirts with innovative patterns and styles to enhance your fashion statement.</p>
 
-						<a class="btn btn-main is-rounded">VIEW THIS PRODUCT</a>
+						<button class="js-modal-trigger btn btn-main is-rounded" data-target="Product2" >
+							VIEW THIS PRODUCT
+						</button>
+
+						<!-- DATA TARGET -->
+						<div id="Product2" class="modal">
+							<div class="modal-background"></div>
+							<div class="modal-content">
+								<p class="image is-4by3">
+								<img src="pages/images/about/image-2.jpg" alt="">
+								</p>
+							</div>
+							<button class="modal-close is-large" aria-label="close"></button>
+						  </div>
+
 					</div>
 				</div>
 			</div>
@@ -361,7 +401,21 @@
 						</ul>
 						<p class="card-text mb-5">We design shirts with a creative Go (Golang) programming language logo on the front.</p>
 
-						<a class="btn btn-main is-rounded">VIEW THIS PRODUCT</a>
+						<button class="js-modal-trigger btn btn-main is-rounded" data-target="Product3" >
+							VIEW THIS PRODUCT
+						</button>
+
+						<!-- DATA TARGET -->
+						<div id="Product3" class="modal">
+							<div class="modal-background"></div>
+							<div class="modal-content">
+								<p class="image is-4by3">
+								<img src="pages/images/about/image-3.jpg" alt="">
+								</p>
+							</div>
+							<button class="modal-close is-large" aria-label="close"></button>
+						  </div>
+
 					</div>
 				</div>
 			</div>
@@ -369,105 +423,6 @@
 	</div>
 </section>
 <!-- End Our Best Selling -->
-
-<!-- START CAROUSEL WHAT THEY SAY ABOUT US -->
-<!-- <section style="padding-top: 0px;" class="section testimonial">
-	<div class="container">
-		<div class="columns is-desktop">
-			<div class="column is-8-desktop">
-				<div style="padding-bottom: 40px;" class="heading">
-					<h2 class="mt-4 content-title" >What they say about us</h2>
-					<p style="padding-top: 10px;" class="text-sm ">They are truely amazing in the industry ,molestiae expedita aspernatur officia, similique minima laudantium. Corrupti ipsa perspiciatis commodi nesciunt rerum mollitia enim voluptate!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="container-fluid">
-		<div class="columns is-multiline">
-			<div class="column is-12 testimonial-wrap">
-				<div class="testimonial-block">
-					<p>
-						Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-					</p>
-
-					<div class="client-info is-flex is-align-items-center">
-						<div class="client-img">
-							<img src="pages/images/team/testimonial1.jpg" alt="" class="w-100">
-						</div>
-						<div class="info">
-							<h6>Dzikri Izzatul</h6>
-							<span>Bandung</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="testimonial-block">
-					<p>
-						Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-					</p>
-
-					<div class="client-info is-flex is-align-items-center">
-						<div class="client-img">
-							<img src="pages/images/team/testimonial2.jpg" alt="" class="w-100">
-						</div>
-						<div class="info">
-							<h6>Fitrah Ali Akbar</h6>
-							<span>Tangerang</span>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-block">
-					<p>
-						Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-					</p>
-
-					<div class="client-info is-flex is-align-items-center">
-						<div class="client-img">
-							<img src="pages/images/team/testimonial3.jpg" alt="" class="w-100">
-						</div>
-						<div class="info">
-							<h6>Salman Akbar</h6>
-							<span>Kebumen</span>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-block">
-					<p>
-						Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-					</p>
-
-					<div class="client-info is-flex is-align-items-center">
-						<div class="client-img">
-							<img src="pages/images/team/testimonial0.jpg" alt="" class="w-100">
-						</div>
-						<div class="info">
-							<h6>John Partho</h6>
-							<span>Newyork USA</span>
-						</div>
-					</div>
-				</div>
-				<div class="testimonial-block">
-					<p>
-						Maiores quasi placeat harum itaque, ducimus cumque quas expedita hic. Qui ullam iste provident mollitia expedita facilis fuga repellat.
-					</p>
-
-					<div class="client-info is-flex is-align-items-center">
-						<div class="client-img">
-							<img src="pages/images/team/testimonial0.jpg" alt="" class="w-100">
-						</div>
-						<div class="info">
-							<h6>John Partho</h6>
-							<span>Newyork USA</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-<!-- END CAROUSEL -->
-
 
 <!-- footer Start -->
 <footer class="footer section">
@@ -549,7 +504,6 @@
 </footer>
 <!-- FOOTER ENDS -->
 
-
     <!-- Main jQuery -->
     <script type="module" src="pages/plugins/jquery/jquery.js"></script>
     <script type="module" src="pages/js/contact.js"></script>
@@ -571,7 +525,8 @@
 
 
 <!-- JS YANG DIBUAT SENDIRI -->
-	<script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.6/main.js"></script>
+	<script type="module" src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.7/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/Fancypedia/repojs@0.5.7/modal.js"></script>
 
   </body>
   </html>
